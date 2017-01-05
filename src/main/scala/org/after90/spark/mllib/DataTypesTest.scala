@@ -1,6 +1,6 @@
 package org.after90.spark.mllib
 
-import org.apache.spark.mllib.linalg.{Vector, Vectors}
+import org.apache.spark.mllib.linalg.{Vector, Vectors, Matrix, Matrices}
 import org.apache.spark.mllib.regression.LabeledPoint
 
 /**
@@ -25,5 +25,8 @@ object DataTypesTest {
     // Create a labeled point with a negative label and a sparse feature vector.
     val neg = LabeledPoint(0.0, Vectors.sparse(3, Array(0, 2), Array(1.0, 3.0)))
     println(neg)
+
+    val dm: Matrix = Matrices.dense(3, 2, Array(1.0, 3.0, 5.0, 2.0, 4.0, 6.0))
+    println(dm)
   }
 }
