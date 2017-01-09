@@ -7,7 +7,7 @@ package org.after90.spark
 import org.apache.spark.{SparkConf, SparkContext}
 object WordCount {
   def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("WordCount")//.setMaster("local[*]")
+    val conf = new SparkConf().setAppName("WordCount").setMaster("local[*]")
     val sc = new SparkContext(conf)
     val textRDD = sc.textFile("/Users/zhaogj/tmp/spark/sparkinput.txt")
     println(textRDD.count())

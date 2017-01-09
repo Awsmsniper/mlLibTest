@@ -26,4 +26,3 @@ lazy val root = (project in file(".")).
     libraryDependencies += hdfs,
     libraryDependencies += spark_streaming_kafka
   )
-lazy val hello = taskKey[Unit]("一个task事例")
